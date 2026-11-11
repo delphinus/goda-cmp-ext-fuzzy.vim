@@ -1,6 +1,6 @@
 // Package matcherfuzzy provides the matcher "matcherfuzzy", which keeps the
 // candidates containing the typed characters in order (not necessarily
-// adjacent). The matchers bundled with goda-cmp match the head of a word only
+// adjacent). The matchers of goda-cmp-ext match the head of a word only
 // (matcherhead, matcherprefix); this lets "Prl" find Println, as blink.cmp does.
 package matcherfuzzy
 

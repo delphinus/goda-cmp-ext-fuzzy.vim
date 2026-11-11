@@ -3,7 +3,7 @@
 [English](README.md)
 
 > [!WARNING]
-> β版 (v0.0.x) です。goda-cmp.vim 自体が開発の途中で、同梱の拡張を別のリポジトリへ移す作業も進んでいるため、API・import のパス・このリポジトリの名前が変わることがあります。
+> β版 (v0.0.x) です。goda-cmp.vim 自体が開発の途中のため、API・import のパス・このリポジトリの名前が変わることがあります。
 
 [goda-cmp.vim](https://github.com/Shougo/goda-cmp.vim) 用の fuzzy なフィルタ。
 
@@ -18,7 +18,7 @@
 
 ## なぜ作ったか
 
-goda-cmp 同梱のマッチャは語頭の一致 (`matcherhead`、`matcherprefix`) だけを扱う。また goda-cmp は、ソースごとに並べた候補をソースの順に繋ぐだけなので、最初のソースの弱い一致が、最後のソースのちょうどの一致より先に来る。これらのフィルタは、その両方で goda-cmp を blink.cmp に近い動きにする。
+[goda-cmp-ext](https://github.com/Shougo/goda-cmp-ext) のマッチャは語頭の一致 (`matcherhead`、`matcherprefix`) だけを扱う。また goda-cmp は、ソースごとに並べた候補をソースの順に繋ぐだけなので、最初のソースの弱い一致が、最後のソースのちょうどの一致より先に来る。これらのフィルタは、その両方で goda-cmp を blink.cmp に近い動きにする。
 
 一致の判定と点数の付け方は、fzf の v1 のアルゴリズムを簡単にしたもの。打ち間違いは許容しない。
 

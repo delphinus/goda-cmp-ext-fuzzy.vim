@@ -3,8 +3,7 @@
 [日本語](README.ja.md)
 
 > [!WARNING]
-> This is a beta (v0.0.x). goda-cmp.vim itself is under active development,
-> and its bundled extensions are being moved into repositories of their own, so
+> This is a beta (v0.0.x). goda-cmp.vim itself is under active development, so
 > the API, the import paths and even the name of this repository may change.
 
 Fuzzy filters for [goda-cmp.vim](https://github.com/Shougo/goda-cmp.vim).
@@ -21,7 +20,7 @@ Case is smartcase: ignored unless the typed text has an upper case letter, as
 
 ## Why
 
-The matchers bundled with goda-cmp match the head of a word only
+The matchers of [goda-cmp-ext](https://github.com/Shougo/goda-cmp-ext) match the head of a word only
 (`matcherhead`, `matcherprefix`). And goda-cmp concatenates the candidates
 sorted per source in the order of the sources, so a weak match of the first
 source comes before an exact match of the last one. These filters make
