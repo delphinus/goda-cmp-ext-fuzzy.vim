@@ -31,7 +31,7 @@ https://github.com/user-attachments/assets/edfe657b-72ef-4f4e-81c0-d653cc37dab2
 これらは goda-cmp の設定が import する Go のパッケージ。設定の `go.mod` で require するか:
 
 ```sh
-cd ~/.config/nvim/goda-cmp   # 設定のモジュール
+cd ~/.vim/goda-cmp   # 設定のモジュール (Neovim では ~/.config/nvim/goda-cmp)
 go get github.com/delphinus/goda-cmp-ext-fuzzy.vim@latest
 go mod tidy
 ```
@@ -49,6 +49,14 @@ go mod tidy
     end, { "goda.vim", "goda-cmp.vim", "goda-cmp-ext-fuzzy.vim" })
   end,
 }
+```
+
+Vim で、プラグインをパッケージ (`~/.vim/pack/plugins/start`) に入れているなら:
+
+```vim
+let s:root = expand('~/.vim/pack/plugins/start')
+let g:goda#workspace = ['goda.vim', 'goda-cmp.vim', 'goda-cmp-ext-fuzzy.vim']
+      \ ->map({_, name -> s:root .. '/' .. name})
 ```
 
 この場合も `go.mod` での require は要る。workspace が差し替えるのは、どのバージョンを使うかだけ。

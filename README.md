@@ -39,7 +39,7 @@ These are Go packages that your goda-cmp configuration imports. Either
 require them in its `go.mod`:
 
 ```sh
-cd ~/.config/nvim/goda-cmp   # your configuration module
+cd ~/.vim/goda-cmp   # your configuration module (~/.config/nvim/goda-cmp in Neovim)
 go get github.com/delphinus/goda-cmp-ext-fuzzy.vim@latest
 go mod tidy
 ```
@@ -59,6 +59,14 @@ version (goda-pm.vim does this for you). With lazy.nvim, for example:
     end, { "goda.vim", "goda-cmp.vim", "goda-cmp-ext-fuzzy.vim" })
   end,
 }
+```
+
+In Vim, with the plugins in a package (`~/.vim/pack/plugins/start`):
+
+```vim
+let s:root = expand('~/.vim/pack/plugins/start')
+let g:goda#workspace = ['goda.vim', 'goda-cmp.vim', 'goda-cmp-ext-fuzzy.vim']
+      \ ->map({_, name -> s:root .. '/' .. name})
 ```
 
 The module still has to be required in `go.mod`; the workspace only replaces
