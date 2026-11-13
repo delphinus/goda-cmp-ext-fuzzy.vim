@@ -2,8 +2,12 @@
 
 [English](README.md)
 
-> [!WARNING]
-> β版 (v0.0.x) です。goda-cmp.vim 自体が開発の途中のため、API・import のパス・このリポジトリの名前が変わることがあります。
+> [!NOTE]
+> goda-cmp.vim 自体が開発の途中のため、それに合わせてこのプラグインの API も変わることがあります。
+
+https://github.com/user-attachments/assets/edfe657b-72ef-4f4e-81c0-d653cc37dab2
+
+*`prl` で `Println`、`tsp` で `TrimSpace`、`snt` で `sentence` を出したところ。[goda-cmp-ext-luasrc.vim](https://github.com/delphinus/goda-cmp-ext-luasrc.vim) の nvimlsp のソースで gopls の候補を、buffer のソースと一緒に `sorterglobal` で並べている (`demo/record.sh` で録画)。*
 
 [goda-cmp.vim](https://github.com/Shougo/goda-cmp.vim) 用の fuzzy なフィルタ。
 
@@ -101,6 +105,10 @@ func (d data) ScoreOffset() int { return d.offset }
 ```
 
 `fuzzy.Match` は一致した文字の位置を返す。一致した文字に色を付ける UI で使える。
+
+## デモ
+
+`demo/record.sh` は、最小の設定 (`demo/init.lua`、`demo/config`) でデモを録画する。Neovim と gopls を使い、プラグインは自分で取得して、`demo/sample/main.go` に打ち込む。asciinema、agg、ffmpeg が要る。出力は `demo/out/`。
 
 ## ライセンス
 

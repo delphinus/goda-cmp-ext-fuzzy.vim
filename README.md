@@ -2,9 +2,13 @@
 
 [日本語](README.ja.md)
 
-> [!WARNING]
-> This is a beta (v0.0.x). goda-cmp.vim itself is under active development, so
-> the API, the import paths and even the name of this repository may change.
+> [!NOTE]
+> goda-cmp.vim itself is under active development, so the API of this plugin
+> may change to follow it.
+
+https://github.com/user-attachments/assets/edfe657b-72ef-4f4e-81c0-d653cc37dab2
+
+*`prl` finds `Println`, `tsp` `TrimSpace` and `snt` `sentence`: gopls through the nvimlsp source of [goda-cmp-ext-luasrc.vim](https://github.com/delphinus/goda-cmp-ext-luasrc.vim) and the buffer source, sorted together by `sorterglobal` (recorded with `demo/record.sh`).*
 
 Fuzzy filters for [goda-cmp.vim](https://github.com/Shougo/goda-cmp.vim).
 
@@ -117,6 +121,13 @@ func (d data) ScoreOffset() int { return d.offset }
 
 `fuzzy.Match` returns the positions of the matched characters, for a UI that
 highlights them.
+
+## Demo
+
+`demo/record.sh` records the demo with a minimal configuration
+(`demo/init.lua`, `demo/config`): Neovim, gopls and the plugins it clones,
+typing into `demo/sample/main.go`. It needs asciinema, agg and ffmpeg, and
+writes `demo/out/`.
 
 ## License
 
